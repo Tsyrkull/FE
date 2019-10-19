@@ -1,0 +1,53 @@
+GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1
+Host: gaia.cs.umass.edu
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: ru-RU,ru;q=0.9,uk;q=0.8,en;q=0.7
+If-None-Match: "2ca-5953d25d1970b"
+If-Modified-Since: Sat, 19 Oct 2019 05:59:03 GMT
+
+========================================================
+
+Комментарии:
+HTTP - request
+метод - GET
+повторное использование соединений
+максимальный "возраст" кеша - 0 
+понимает - text, html, xml, images,
+понимает кодирование gzip, deflate
+понимает языки - ru, uk, en
+если документ не изменялся с субботы 19 октября 2019, не будет отправлен с ответом 304
+
+
+========================================================
+
+HTTP/1.1 304 Not Modified
+Date: Sat, 19 Oct 2019 08:54:13 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3
+Connection: Keep-Alive
+Keep-Alive: timeout=5, max=100
+ETag: "2ca-5953d25d1970b"
+
+========================================================
+
+Комментарии:
+HTTP - response
+версия - 1.1
+группа статуса - 3хх - Redirection, код 304 - not modified
+повторное использование соединений
+соединение поддерживается максимум 5 секунд и до 100 ресурсов
+кешировано методом ETag
+
+
+
+
+
+
+
+
+
+
