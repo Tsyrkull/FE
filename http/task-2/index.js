@@ -2,7 +2,8 @@
 require('http').createServer(function (req, res) {
     console.log('new request');
     if (req.url === '/') {
-        res.end(`<!DOCTYPE html> <html>
+        res.end(`<!DOCTYPE html>
+                 <html>
                  <body>
                     <div id="demo">
                        <h2>The XMLHttpRequest Object</h2>
