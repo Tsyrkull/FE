@@ -1,10 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Task3(30.10.2019)</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+<header>
+    <h1>Artem Tsyliuryk</h1>
+    <figure>
+        <img src="image/artem.jpeg" alt="my-photo">
+        <figcaption>photo made in 2017</figcaption>
+
+    </figure>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-list__item"><a href="#general-information">General Information</a></li>
+            <li class="nav-list__item"><a href="#education">Education</a></li>
+            <li class="nav-list__item"><a href="#skills">Skills</a></li>
+            <li class="nav-list__item"><a href="#code-example">Code example</a></li>
+            <li class="nav-list__item"><a href="#feedback">Feedback form</a></li>
+            <li class="nav-list__item"><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <article id="general-information" class="general-information">
+            <h2>General Information</h2>
+            <p>Was working for
+                <mark>
+                    <bdi>Coca-Cola</bdi>
+                </mark>
+                for more than 6 years. Started as Telephone Sales Representative, finished as
+                Indirect Planning Manager.
+            </p>
+            <p>I have a FranklinCovey Training Certificate -
+                <mark>The 4 Essential Roles of Leadership</mark>
+                14-15.06-2018.
+            </p>
+            <p>Based on the work results in 2017, was nominated for participation in accelerated management development
+                program -
+                <mark>Fast Forward 2 - Manager of Others to Manager of Managers</mark>
+                . In 2018 have passed all three
+                qualifying stages and became a participant of the program of accelerated development of managers - FF2 -
+                MoO to MoM.
+            </p>
+            <p></p>
+        </article>
+        <article id="education" class="education">
+            <h2>Education</h2>
+            <p>Was studying in
+                <mark>Kyiv National University of Trade and Economics</mark>
+                2008 - 2013. Master degree.
+            </p>
+            <p>Finished Infopulse Univer:
+                <mark>"Front-end Developer"</mark>
+                courses 09.2018-04.2019.
+            </p>
+            <p>Started
+                <mark>
+                    <bdi>EPAM</bdi>
+                    External FE/JS
+                </mark>
+                courses 10.2019
+            </p>
+        </article>
+        <article id="skills" class="skills">
+            <h2>Skills</h2>
+            <p>I can work with :</p>
+            <table>
+                <tr>
+                    <td>
+                        <meter value="80" max="100"></meter>
+                    </td>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>
+                        <meter value="80" max="100"></meter>
+                    </td>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>
+                        <meter value="70" max="100"></meter>
+                    </td>
+                    <td>SCSS</td>
+                </tr>
+                <tr>
+                    <td>
+                        <meter value="50" max="100"></meter>
+                    </td>
+                    <td>JavaScript</td>
+                </tr>
+                <tr>
+                    <td>
+                        <meter value="60" max="100"></meter>
+                    </td>
+                    <td>BEM Methodology</td>
+                </tr>
+                <tr>
+                    <td>
+                        <meter value="40" max="100"></meter>
+                    </td>
+                    <td>Git</td>
+                </tr>
+            </table>
+        </article>
+        <article id="code-example" class="code-example">
+            <h2>Code example</h2>
+            <p>One of the latest code examples you can find below</p>
+            <details>
+                <summary>Code example</summary>
+                <pre><code>class Fighter {
+    constructor(fighterInfo) {
+        this._name = fighterInfo.name;
+        this._damage = fighterInfo.damage;
+        this._agility = fighterInfo.agility;
+        this._hp = fighterInfo.hp;
+        this._maxHP = fighterInfo.hp;
+        this._winsQuan = 0;
+        this._lossesQuan = 0;
+    }
+
+    getName() {
+        return this._name;
+    }
+
+    getDamage() {
+        return this._damage;
+    }
+
+    getAgility() {
+        return this._agility
+    }
+
+    getHealth() {
+        return this._hp
+    }
+
+    attack(defender) {
+        let   minChance = 0
+            , maxChance = 100
+            , defenderDodgeChance = defender.getAgility() > maxChance? maxChance : defender.getAgility()
+            , attackerHitChance = maxChance - defenderDodgeChance
+            , defDodgeChanceNum = Math.floor(Math.random() * (defenderDodgeChance - minChance)) + minChance
+            , attackerHitChanceNum = Math.floor(Math.random() * (attackerHitChance - minChance)) + minChance;
+
+        if (defDodgeChanceNum < attackerHitChanceNum) {
+            defender.dealDamage(this.getDamage());
+            console.log(`${this.getName()} make ${this.getDamage()} damage to ${defender.getName()}`);
+        } else {
+            console.log(`${this.getName()} attack missed`)
+        }
+    }
+
+    logCombatHistory() {
+        console.log(`Name: ${this.getName()}, Wins: ${this._winsQuan}, Losses: ${this._lossesQuan} `)
+    }
+
+    heal(healingPoints) {
+        if (this._hp + healingPoints > this._maxHP) {
+            this._hp = this._maxHP
+        } else {
+            this._hp += healingPoints
+        }
+        return this._hp
+    }
+
+    dealDamage(damagePoints) {
+        if (this._hp > damagePoints) {
+            this._hp -= damagePoints;
+        } else {
+            this._hp = 0
+        }
+        return this._hp
+    }
+
+    addWin() {
+        this._winsQuan++;
+    }
+
+    addLoss() {
+        this._lossesQuan++;
+    }
+}
+
+const battle = (fighter1, fighter2) => {
+    if (fighter1.getHealth() <= 0) {
+        console.log(`${fighter1.getName()} is dead. You should heal him to continue the battle`)
+    } else if (fighter2.getHealth() <= 0) {
+        console.log(`${fighter2.getName()} is dead. You should heal him to continue the battle`)
+    } else {
+        fighter1.attack(fighter2);
+        if (fighter2.getHealth() <= 0) {
+            console.log(`${fighter2.getName()} is dead and he cannot continue the battle`);
+            fighter2.addLoss();
+            fighter1.addWin();
+        } else {
+            battle(fighter2, fighter1);
+        }
+    }
+};
+
+const myFighter1 = new Fighter({name: 'John', damage: 20, agility: 25, hp: 100});
+const myFighter2 = new Fighter({name: 'Jim', damage: 10, agility: 40, hp: 120});
+        </code>
+            </pre>
+            </details>
+        </article>
+    </section>
+    <section>
+        <h2>Some music</h2>
+        <p>You can listen one of my favourite covers</p>
+        <audio controls>
+            <source src="audio/disturbed-sound-of-silence.mp3">
+            Audio file is not supported by your browser
+        </audio>
+        <p>Or watch the video with subtitles</p>
+        <video controls poster="image/disturbed-video-poster.png">
+            <source src="video/disturbed-sound-of-silence.mp4">
+            <track kind="subtitles" src="video/disturbed-sound-of-silence-text.vtt" srclang="en" label="English">
+            Video file is not supported by your browser
+        </video>
+    </section>
+    <section id="feedback" class="feedback">
+        <h2>Feedback form</h2>
+        <form class="feedback__form" action="#">
+            <div class="form__name form__field-flex">
+                <label for="#form__name">Please enter your name:</label>
+                <input type="text" id="#form__name" name="form__name">
+            </div>
+            <div class="form__email form__field form__field-flex">
+                <label for="#form__email">Please enter your email:</label>
+                <input type="email" id="#form__email" name="form__email" required>
+            </div>
+            <div class="form__message form__field form__field-flex">
+                <label for="#form__message">Please write your message:</label>
+                <textarea id="#form__message" name="form__message" class="form__message" rows="5"></textarea>
+            </div>
+            <div class="cover-feedback form__field">
+                <p>Did you like this cover?</p>
+                <input type="radio" name="cover-feedback" value="yes" id="cover-yes" checked>
+                <label for="cover-yes">Yes</label>
+                <input type="radio" name="cover-feedback" value="no" id="cover-no">
+                <label for="cover-no">No</label>
+            </div>
+            <button name="submit-btn" class="submit-btn" id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+</main>
+<aside>
+    <section id="contacts" class="contacts">
+        <h2>Contacts</h2>
+        <p>Write me:<a href="mailto:artem13@gmail.com"> artem13@gmail.com</a></p>
+        <p>Call me:<a href="tel:+380503552776"> +380503552776</a></p>
+    </section>
+</aside>
+<footer>
+    <p>Task 3 progress</p>
+    <progress value="100" max="100"></progress>
+    <p>
+        <time datetime="2019-11-04">04.11.2019</time>
+    </p>
+</footer>
 
 </body>
 </html>
