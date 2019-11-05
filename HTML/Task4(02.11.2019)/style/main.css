@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Asap";
+    src: url("/font/asap-regular.ttf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("/font/open-sans-regular.ttf");
+}
+@font-face {
+    font-family:"Segoe WP";
+    src: url("/font/segoe-wp.ttf");
+}
+
+*{
+    /*outline: 1px solid green;*/
+    box-sizing: border-box;
+}
+.crumbs{
+    width: fit-content;
+    margin: 20px;
+    height: 50px;
+    font-size: 18px;
+    position: relative;
+}
+
+.crumbs a{
+    display: inline-block;
+    width: 50px;
+    height: inherit;
+    text-decoration: none;
+    background: #00bad7;
+    color: #fff;
+    margin: 0 18px;
+    position: relative;
+    padding-top: 12px;
+    z-index: 5;
+
+}
+.crumbs a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 65%;
+    border: 25px solid transparent;
+    border-color: #00bad7 #00bad7 #00bad7 transparent;
+    z-index: -1;
+}
+.crumbs a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border: 25px solid transparent;
+    border-color: transparent transparent transparent #00bad7;
+    border-right: 0;
+    z-index: -1;
+}
+.crumbs a:first-child::before, .crumbs a:last-child::after{
+    border-color:#00bad7;
+}
+.first-link{
+    font-family: "Open Sans", sans-serif;
+}
+.second-link{
+    font-family: "Open Sans", sans-serif;
+}
+.third-link{
+    font-family: "Segoe WP", sans-serif;
+}
+.crumbs-var1 a:last-child{
+    background: #233f85;
+}
+.crumbs-var1 a:last-child::before{
+    border-color: #233f85 #233f85 #233f85 transparent
+}
+.crumbs-var1 a:last-child::after{
+    border-color: #233f85;
+}
+.crumbs-var2 a:hover{
+    background: #233f85;
+}
+.crumbs-var2 a:hover::before{
+    border-color: #233f85 #233f85 #233f85 transparent
+}
+.crumbs-var2 a:hover::after{
+    border-color: transparent transparent transparent #233f85
+}
+.crumbs-var2 a:first-child:hover::before, .crumbs-var2 a:last-child:hover::after{
+    border-color:#233f85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
