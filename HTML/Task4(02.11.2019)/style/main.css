@@ -15,6 +15,9 @@
     /*outline: 1px solid green;*/
     box-sizing: border-box;
 }
+
+/*=====Breadcrumbs=====*/
+
 .crumbs{
     width: fit-content;
     margin: 20px;
@@ -89,6 +92,55 @@
     border-color:#233f85;
 }
 
+/*=====Trigger=====*/
+
+.trigger{
+    position: relative;
+}
+.trigger__range{
+    width: 70px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #cecece;
+    border-radius: 15px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: -1;
+    transition: background 1s;
+}
+.trigger__btn{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #9d9d9d;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    z-index: 1;
+    transition: left 1s;
+
+}
+.trigger-checker:checked ~ .trigger__range{
+    background: #79e475;
+}
+.trigger-checker:checked ~ .trigger__btn{
+    left: 39px;
+}
+.trigger-checker{
+    display: none;
+}
+.trigger-checker__label{
+    display: block;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 5;
+}
 
 
 
