@@ -92,6 +92,52 @@
     border-color:#233f85;
 }
 
+/*=====Radiobuttons=====*/
+
+.radio-checker{
+    display: none;
+}
+.radiobutton{
+    margin-bottom: 10px;
+}
+
+.radiobutton__outer{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #377d22;
+    border-radius: 50%;
+    background: #fafafa;
+    position: relative;
+    z-index: -1;
+}
+.radiobutton__outer::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid #377d22;
+    border-radius: 50%;
+    background: #d6d6d6;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
+}
+.radiobutton__label{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+}
+
+.radio-checker:checked ~ .radiobutton__outer{
+    background: #e9ecee;
+}
+.radio-checker:checked ~ .radiobutton__outer::after{
+    background: #377d22;
+}
+
 /*=====Trigger=====*/
 
 .trigger{
@@ -137,8 +183,6 @@
     height: 30px;
     border-radius: 15px;
     position: absolute;
-    top: 1px;
-    left: 1px;
     z-index: 5;
 }
 
