@@ -2,23 +2,25 @@
     font-family: "Asap";
     src: url("/font/asap-regular.ttf");
 }
+
 @font-face {
     font-family: "Open Sans";
     src: url("/font/open-sans-regular.ttf");
 }
+
 @font-face {
-    font-family:"Segoe WP";
+    font-family: "Segoe WP";
     src: url("/font/segoe-wp.ttf");
 }
 
-*{
+* {
     /*outline: 1px solid green;*/
     box-sizing: border-box;
 }
 
 /*=====Breadcrumbs=====*/
 
-.crumbs{
+.crumbs {
     width: fit-content;
     margin: 20px;
     height: 50px;
@@ -26,7 +28,7 @@
     position: relative;
 }
 
-.crumbs a{
+.crumbs a {
     display: inline-block;
     width: 50px;
     height: inherit;
@@ -39,7 +41,8 @@
     z-index: 5;
 
 }
-.crumbs a::before{
+
+.crumbs a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -48,7 +51,8 @@
     border-color: #00bad7 #00bad7 #00bad7 transparent;
     z-index: -1;
 }
-.crumbs a::after{
+
+.crumbs a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -58,50 +62,62 @@
     border-right: 0;
     z-index: -1;
 }
-.crumbs a:first-child::before, .crumbs a:last-child::after{
-    border-color:#00bad7;
+
+.crumbs a:first-child::before, .crumbs a:last-child::after {
+    border-color: #00bad7;
 }
-.first-link{
+
+.first-link {
     font-family: "Open Sans", sans-serif;
 }
-.second-link{
+
+.second-link {
     font-family: "Open Sans", sans-serif;
 }
-.third-link{
+
+.third-link {
     font-family: "Segoe WP", sans-serif;
 }
-.crumbs-var1 a:last-child{
+
+.crumbs-var1 a:last-child {
     background: #233f85;
 }
-.crumbs-var1 a:last-child::before{
+
+.crumbs-var1 a:last-child::before {
     border-color: #233f85 #233f85 #233f85 transparent
 }
-.crumbs-var1 a:last-child::after{
+
+.crumbs-var1 a:last-child::after {
     border-color: #233f85;
 }
-.crumbs-var2 a:hover{
+
+.crumbs-var2 a:hover {
     background: #233f85;
 }
-.crumbs-var2 a:hover::before{
+
+.crumbs-var2 a:hover::before {
     border-color: #233f85 #233f85 #233f85 transparent
 }
-.crumbs-var2 a:hover::after{
+
+.crumbs-var2 a:hover::after {
     border-color: transparent transparent transparent #233f85
 }
-.crumbs-var2 a:first-child:hover::before, .crumbs-var2 a:last-child:hover::after{
-    border-color:#233f85;
+
+.crumbs-var2 a:first-child:hover::before, .crumbs-var2 a:last-child:hover::after {
+    border-color: #233f85;
 }
 
 /*=====Radiobuttons=====*/
 
-.radio-checker{
+.radio-checker {
     display: none;
 }
-.radiobutton{
+
+.radiobutton {
     margin-bottom: 10px;
 }
 
-.radiobutton__outer{
+.radiobutton__outer {
     width: 40px;
     height: 40px;
     border: 2px solid #377d22;
@@ -110,7 +126,8 @@
     position: relative;
     z-index: -1;
 }
-.radiobutton__outer::after{
+
+.radiobutton__outer::after {
     content: "";
     width: 15px;
     height: 15px;
@@ -122,7 +139,8 @@
     left: 25%;
     z-index: 1;
 }
-.radiobutton__label{
+
+.radiobutton__label {
     display: block;
     width: 40px;
     height: 40px;
@@ -131,53 +149,47 @@
     z-index: 5;
 }
 
-.radio-checker:checked ~ .radiobutton__outer{
+.radio-checker:checked ~ .radiobutton__outer {
     background: #e9ecee;
 }
-.radio-checker:checked ~ .radiobutton__outer::after{
+
+.radio-checker:checked ~ .radiobutton__outer::after {
     background: #377d22;
 }
 
 /*=====Trigger=====*/
 
-.trigger{
-    position: relative;
+.trigger-checker {
+    display: none;
 }
-.trigger__range{
+
+.trigger__range {
     width: 70px;
     height: 30px;
     background: #fff;
     border: 1px solid #cecece;
     border-radius: 15px;
-    position: absolute;
-    top: 1px;
-    left: 1px;
+    position: relative;
     z-index: -1;
     transition: background 1s;
 }
-.trigger__btn{
+
+.trigger__range::after {
+    content: "";
     width: 32px;
     height: 32px;
     border: 1px solid #9d9d9d;
     border-radius: 50%;
     background: #fff;
     position: absolute;
-    top: 0px;
-    left: 1px;
+    top: -5%;
+    left: -1%;
     z-index: 1;
     transition: left 1s;
 
 }
-.trigger-checker:checked ~ .trigger__range{
-    background: #79e475;
-}
-.trigger-checker:checked ~ .trigger__btn{
-    left: 39px;
-}
-.trigger-checker{
-    display: none;
-}
-.trigger-checker__label{
+
+.trigger-checker__label {
     display: block;
     width: 70px;
     height: 30px;
@@ -186,14 +198,10 @@
     z-index: 5;
 }
 
+.trigger-checker:checked ~ .trigger__range {
+    background: #79e475;
+}
 
-
-
-
-
-
-
-
-
-
-
+.trigger-checker:checked ~ .trigger__range::after {
+    left: 51%;
+}
