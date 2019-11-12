@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>HTML Task-5</title>
     <link rel="stylesheet" href="style/main.css">
+
 </head>
 <body>
 <header>
@@ -19,26 +20,26 @@
         <nav class="navigation">
             <ul class="nav-menu">
                 <li class="nav-menu__item">
-                    <a href="#" class="item-link">Information</a>
+                    <a href="#slider" class="item-link">Posters</a>
                     <ul class="nav-submenu">
-                        <li>Information-1.1
+                        <li>Posters-1.1
                             <ul class="nav-lowest-submenu">
-                                <li>Information-1.1.1</li>
-                                <li>Information-1.1.2</li>
-                                <li>Information-1.1.3</li>
+                                <li>Posters-1.1.1</li>
+                                <li>Posters-1.1.2</li>
+                                <li>Posters-1.1.3</li>
                             </ul>
                         </li>
-                        <li>Information-1.2
+                        <li>Posters-1.2
                             <ul class="nav-lowest-submenu">
-                                <li>Information-1.2.1</li>
-                                <li>Information-1.2.2</li>
-                                <li>Information-1.2.3</li>
+                                <li>Posters-1.2.1</li>
+                                <li>Posters-1.2.2</li>
+                                <li>Posters-1.2.3</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="item-link">Albums</a>
+                    <a href="#albums" class="item-link">Albums</a>
                     <ul class="nav-submenu">
                         <li>Albums-1.1
                             <ul class="nav-lowest-submenu">
@@ -58,7 +59,7 @@
                     </ul>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="item-link">Members</a>
+                    <a href="#members" class="item-link">Members</a>
                     <ul class="nav-submenu">
                         <li>Members-1.1
                             <ul class="nav-lowest-submenu">
@@ -77,7 +78,7 @@
                     </ul>
                 </li>
                 <li class="nav-menu__item">
-                    <a href="#" class="item-link">Contacts</a>
+                    <a href="#contacts" class="item-link">Contacts</a>
                     <ul class="nav-submenu">
                         <li>Contacts-1.1
                             <ul class="nav-lowest-submenu">
@@ -98,8 +99,8 @@
             </ul>
         </nav>
         <section class="section-slider">
-            <h2>Three Days Grace Information</h2>
-            <div class="main-slider">
+            <h2>Three Days Grace Posters</h2>
+            <div class="main-slider" id="slider">
                 <input type="radio" class="slider-radio-btn slider-radio-btn1" name="slider-radio-btn" id="slide1-btn"
                        checked>
                 <input type="radio" class="slider-radio-btn slider-radio-btn2" name="slider-radio-btn" id="slide2-btn">
@@ -114,32 +115,42 @@
                     <label for="slide5-btn" class="label5 radio-btn-label"></label>
                 </div>
                 <div class="slide slide1">
-                    <img src="image/three-days-grace.jpg" alt="">
+                    <img src="image/poster5.jpg" alt="slide1-img">
                 </div>
                 <div class="slide slide2">
-                    <img src="image/one-x.png" alt="">
+                    <img src="image/poster3.jpg" alt="slide2-img">
                 </div>
                 <div class="slide slide3">
-                    <img src="image/life-starts-now.jpg" alt="">
+                    <img src="image/poster1.jpg" alt="slide3-img">
                 </div>
                 <div class="slide slide4">
-                    <img src="image/transit-of-venus.jpeg" alt="">
+                    <img src="image/poster2.jpg" alt="slide4-img">
                 </div>
                 <div class="slide slide5">
-                    <img src="image/human.jpeg" alt="">
+                    <img src="image/poster4.jpg" alt="slide5-img">
                 </div>
-                <!--<div class="slider-arrows">-->
-                <!--<button class="slider__arrow slider__arrow-prev">&lt;</button>-->
-                <!--<button class="slider__arrow slider__arrow-next">&gt;</button>-->
-                <!--</div>-->
+                <div class="slider__arrow slider__arrow-prev">
+                    <label for="slide1-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide2-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide3-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide4-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide5-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                </div>
+                <div class="slider__arrow slider__arrow-next">
+                    <label for="slide1-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide2-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide3-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide4-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                    <label for="slide5-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                </div>
 
             </div>
-            <p>Best music for autumn!</p>
+            <h3>Best music in autumn!</h3>
         </section>
 
         <section class="">
             <h2>Albums</h2>
-            <div class="albums">
+            <div class="albums" id="albums">
                 <div class="album">
                     <img src="image/three-days-grace.jpg" alt="album-three-days-grace" class="album-image">
                     <p class="album-name">Three Days Grace</p>
@@ -254,9 +265,23 @@
                 </div>
             </div>
         </section>
-        <section class="">
-            <h2>Actual Members</h2>
-            <div class="team-members">
+        <section class="about-us">
+            <h2 class="about-us__title">About</h2>
+            <p class="about-us__description">Three Days Grace is a Canadian rock band formed in Norwood, Ontario in
+                1997. Based in Toronto, the band's original line-up consisted of guitarist and lead vocalist Adam
+                Gontier, drummer and backing vocalist Neil Sanderson, and bassist Brad Walst. In 2003, Barry Stock was
+                recruited as the band's lead guitarist, making them a four-member band. In 2013, Gontier left the band
+                and was replaced by My Darkest Days' vocalist Matt Walst, who is also the younger brother of bassist
+                Brad Walst.</p>
+            <p class="about-us__description">Currently signed to RCA Records, they have released six studio albums, each
+                at three-year intervals: Three Days Grace in 2003, One-X in 2006, Life Starts Now in 2009, Transit of
+                Venus in 2012, Human in 2015, and Outsider in 2018. The first three albums have been RIAA certified 2x
+                platinum, 3x platinum, and platinum, respectively, in the United States. In Canada, they have been
+                certified by Music Canada as platinum, double platinum, and platinum, respectively. The band has a
+                record 15 No. 1 songs on the Billboard Hot Mainstream Rock Tracks chart, and three No. 1 hits on
+                Alternative Songs.</p>
+            <h3>Team members</h3>
+            <div class="team-members" id="members">
                 <div class="member">
                     <img src="icon/microphone-solid.svg" alt="microphone-icon" class="team-member__icon">
                     <p class="member-name">Mat Walst</p>
@@ -279,13 +304,34 @@
                 </div>
             </div>
         </section>
-        <section class="contacts"></section>
+        <section class="contacts" id="contacts">
+            <section class="contacts__form">
+                <h3>Want to contact us?</h3>
+                <p>Telephone: <a href="tel:+380503552776">050 355 277 6</a></p>
+                <p>Skype: <a href="skype:live:artem13_5">live:artem13_5</a></p>
+                <p>Facebook: <a href="http://facebook.com">link</a></p>
+                <form action="#">
+                    <textarea name="contact-form-message" id="" cols="30" rows="6" placeholder="Leave us a message"
+                              class="form__message"></textarea>
+                    <input type="email" name="contact-form-email" placeholder="your@mail.com" class="form__email">
+                    <button class="form__btn">send</button>
+                </form>
+            </section>
+            <section class="contacts__map">
+                <h3>Where we located?</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1453.5462558409754!2d-79.8785893418198!3d43.228519994784534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDEzJzQyLjciTiA3OcKwNTInMzkuMCJX!5e0!3m2!1sru!2sua!4v1573566302559!5m2!1sru!2sua"
+                        frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
+            </section>
+        </section>
     </div>
 </main>
 <footer>
     <div class="wrapper">
-        <p></p>
-        <a href=""></a>
+        <p>Made by Tsyrkull.</p>
+        <p>You can find me on:</p>
+        <a href="https://github.com/Tsyrkull" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/%D0%B0%D1%80%D1%82%D0%B5%D0%BC-%D1%86%D0%B8%D0%BB%D1%8E%D1%80%D0%B8%D0%BA-6a93a4aa/"
+           target="_blank">LinkedIn</a>
     </div>
 </footer>
 

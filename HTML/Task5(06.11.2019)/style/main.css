@@ -4,7 +4,6 @@ body {
 
 * {
     box-sizing: border-box;
-    /*outline: 1px solid green;*/
 }
 
 ul, ol {
@@ -18,6 +17,7 @@ ul, ol {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .wrapper {
@@ -38,7 +38,8 @@ a {
 .nav-menu li {
     width: 150px;
     height: 20px;
-    background: orange;
+    background: #e57b7f;
+    cursor: pointer;
 }
 
 .nav-menu__item {
@@ -49,11 +50,12 @@ a {
 .nav-submenu, .nav-lowest-submenu {
     display: none;
     position: absolute;
+    cursor: pointer;
 }
 
 .nav-submenu {
     top: 100%;
-    left: 0%;
+    left: 0;
 }
 
 .nav-lowest-submenu {
@@ -123,7 +125,13 @@ a {
     width: 100%;
 }
 
-/*=======Проверить еще раз=========*/
+.radio-btn__labels {
+    position: absolute;
+    z-index: 2;
+    top: 93%;
+    left: 40%;
+}
+
 .radio-btn-label {
     background: rgba(234, 213, 203, 0.7);
     width: 15px;
@@ -132,15 +140,61 @@ a {
     display: inline-block;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 2;
 }
 
-/*=======Проверить еще раз=========*/
+.radio-btn-label:hover {
+    background: #e57b7f;
+}
+
 .slider-radio-btn1:checked ~ .slide1,
 .slider-radio-btn2:checked ~ .slide2,
 .slider-radio-btn3:checked ~ .slide3,
 .slider-radio-btn4:checked ~ .slide4,
 .slider-radio-btn5:checked ~ .slide5 {
+    visibility: visible;
+}
+
+.slider-radio-btn1:checked ~ div .label1,
+.slider-radio-btn2:checked ~ div .label2,
+.slider-radio-btn3:checked ~ div .label3,
+.slider-radio-btn4:checked ~ div .label4,
+.slider-radio-btn5:checked ~ div .label5 {
+    background: #e57b7f;
+}
+
+.slider__arrow-prev label, .slider__arrow-next label {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: none;
+    top: 40%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.slider__arrow-prev label {
+    left: 0;
+
+}
+
+.slider__arrow-next label {
+    right: 0;
+
+}
+
+.slider-radio-btn1:checked ~ .slider__arrow-prev label:nth-child(5),
+.slider-radio-btn2:checked ~ .slider__arrow-prev label:nth-child(1),
+.slider-radio-btn3:checked ~ .slider__arrow-prev label:nth-child(2),
+.slider-radio-btn4:checked ~ .slider__arrow-prev label:nth-child(3),
+.slider-radio-btn5:checked ~ .slider__arrow-prev label:nth-child(4) {
+    visibility: visible;
+}
+
+.slider-radio-btn1:checked ~ .slider__arrow-next label:nth-child(2),
+.slider-radio-btn2:checked ~ .slider__arrow-next label:nth-child(3),
+.slider-radio-btn3:checked ~ .slider__arrow-next label:nth-child(4),
+.slider-radio-btn4:checked ~ .slider__arrow-next label:nth-child(5),
+.slider-radio-btn5:checked ~ .slider__arrow-next label:nth-child(1) {
     visibility: visible;
 }
 
@@ -156,6 +210,11 @@ a {
     margin: 20px;
 }
 
+.album:hover {
+    background: #e57b7f;
+    opacity: 0.7;
+}
+
 .album-image {
     width: 100%;
     height: 200px;
@@ -166,11 +225,17 @@ a {
     padding: 0 0 0 15px;
 }
 
+.about-us__description {
+    text-align: left;
+    text-indent: 20px;
+}
+
 .team-members {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 0 20px 0;
 }
 
 .member {
@@ -178,10 +243,73 @@ a {
     width: 150px;
     height: 150px;
     margin: 20px;
+}
 
+.member:hover {
+    background: #e57b7f;
+    opacity: 0.7;
 }
 
 .team-member__icon {
     width: 50px;
     height: 50px;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #000;
+}
+
+.contacts__form {
+    width: 30%;
+
+}
+
+.contacts__map {
+    width: 65%;
+}
+
+.contacts a:hover {
+
+    color: #e57b7f;
+}
+
+.map {
+    width: 70%;
+    height: 300px;
+}
+
+.form__message {
+    resize: none;
+}
+
+.form__message, .form__email, .form__btn {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+
+.form__btn {
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+}
+.form__btn:hover{
+    background: #e57b7f;
+}
+
+.contacts a:hover, footer a:hover {
+    color: #e57b7f;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer p {
+    display: inline-block;
 }
