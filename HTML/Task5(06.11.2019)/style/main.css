@@ -1,9 +1,11 @@
-body {
-    text-align: center;
-}
-
 * {
     box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 ul, ol {
@@ -20,10 +22,17 @@ a {
     color: #000;
 }
 
-.wrapper {
-    max-width: 960px;
-    margin: 0 auto;
+.icon-menu {
+    display: none;
+}
 
+.icon-menu img {
+    width: 100%;
+    height: 100%;
+}
+
+.burger-menu__checkbox {
+    display: none;
 }
 
 .header-logo {
@@ -36,7 +45,7 @@ a {
 }
 
 .nav-menu li {
-    width: 150px;
+    width: 20%;
     height: 20px;
     background: #e57b7f;
     cursor: pointer;
@@ -48,9 +57,11 @@ a {
 }
 
 .nav-submenu, .nav-lowest-submenu {
+    min-width: 100%;
     display: none;
     position: absolute;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .nav-submenu {
@@ -58,13 +69,18 @@ a {
     left: 0;
 }
 
-.nav-lowest-submenu {
+.nav-lowest-submenu1, .nav-lowest-submenu2 {
     top: 100%;
     left: 75%
 }
 
+.nav-lowest-submenu3, .nav-lowest-submenu4 {
+    top: 100%;
+    right: 75%
+}
+
 .nav-submenu li {
-    width: 150px;
+    width: 100%
 }
 
 .nav-menu li:hover .nav-submenu {
@@ -98,6 +114,7 @@ a {
 }
 
 .section-slider {
+    display: block;
     height: 500px;
 }
 
@@ -121,8 +138,10 @@ a {
 }
 
 .slide img {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .radio-btn__labels {
@@ -257,26 +276,28 @@ a {
 
 .contacts {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     border-top: 1px solid #000;
 }
 
-.contacts__form {
-    width: 30%;
-
+.contacts__map {
+    width: 550px;
+    margin: 20px;
 }
 
-.contacts__map {
-    width: 65%;
+.contacts__form {
+    width: 230px;
+    margin: 20px;
+
 }
 
 .contacts a:hover {
-
     color: #e57b7f;
 }
 
 .map {
-    width: 70%;
+    width: 100%;
     height: 300px;
 }
 
@@ -298,7 +319,8 @@ a {
     text-transform: uppercase;
     margin: 10px 0 0 0;
 }
-.form__btn:hover{
+
+.form__btn:hover {
     background: #e57b7f;
 }
 
@@ -312,4 +334,38 @@ footer {
 
 footer p {
     display: inline-block;
+}
+
+@media (max-width: 640px ) {
+    .nav-menu li:hover .nav-submenu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .section-slider, .navigation {
+        display: none;
+    }
+
+    .icon-menu {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 15px auto;
+    }
+
+    .icon-menu img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .burger-menu__checkbox:checked ~ .navigation, .navigation li {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .burger-menu__checkbox:checked ~ .navigation li:first-child {
+        display: none;
+    }
 }
