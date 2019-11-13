@@ -19,7 +19,10 @@ h3{
     margin: 0 3.5em;
 }
 .product-card{
+    margin: 50px;
     max-width: 46.5em;
+    border-radius: 20px;
+    box-shadow: -20px 10px 10px 0 rgba(0,0,0, 0.7);
 }
 .main__image{
     position: absolute;
@@ -31,8 +34,7 @@ h3{
 .product-title{
     padding: 20px 0 0 0;
     position: relative;
-    min-height:415px;
-    background:#dc6b3f;
+    background:linear-gradient(to bottom right, #e27240,#a82b39);
     color: #fff;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -42,12 +44,13 @@ h3{
     font-size: 3em;
 }
 .title__details{
-    padding: 30px 0 0 0;
-    font-size: 1.5em;
+    padding: 20px 0 0 0;
+    font-size: 1.7em;
 }
 .title__slogan{
     font-size: 180px;
     font-weight: bold;
+    line-height: 100%;
     color: rgba(0,0,0,0.1);
 }
 
@@ -70,7 +73,7 @@ h3{
     text-transform: uppercase;
 }
 .product__description{
-    padding: 40px 0 0 0 ;
+    padding: 45px 0 0 0 ;
     position: relative;
     background: #fff;
     min-height: 420px;
@@ -98,35 +101,45 @@ h3{
     left: 67%;
 }
 .description__details{
-    margin: 20px 0 0 0;
+    margin: 5px 0 0 0;
+    font-size: 1.7em;
 }
 .bold{
     font-weight: bold;
 }
 .product__rate{
-    margin: 15px 0 0 0;
+    margin: 10px 0 0 0;
 }
 .stars-input{
     display: none;
 }
 .product__rate i{
    color: #ababab;
+    font-size: 1.6em;
+
 }
 .product__rate i:hover{
     color: #000;
 }
 .size{
-    margin: 35px 0 0 0;
+    margin: 30px 0 0 0;
+
+}
+.size-title{
+    font-size: 1.7em;
 }
 .size-variant, .color-variant{
     display: inline-block;
+}
+.size-variants__list{
+    margin: 20px 0 0 0;
 }
 
 .size-variant{
     margin: 0 10px;
     width:35px;
     height:35px;
-    font-size: 1.5em;
+    font-size: 1.7em;
     line-height: 35px;
     text-align: center;
     border-radius: 50%;
@@ -137,10 +150,13 @@ h3{
     background: #e46157;
 }
 .color{
-    margin: 45px 0 0 0;
+    margin: 30px 0 0 0;
+}
+.color-title{
+    font-size: 1.7em;
 }
 .color-list{
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
 }
 .color-variant{
     width: 50px;
@@ -149,6 +165,7 @@ h3{
     border: 2px solid transparent;
     border-radius: 50%;
     position: relative;
+
 }
 .color-variant:hover{
     border-color: red;
@@ -183,6 +200,6 @@ h3{
     font-size: 4em;
     color: #fff;
     font-weight: 100;
-    top: 72%;
+    top: 70%;
     left: 45%;
 }
