@@ -1,46 +1,336 @@
-*{
-    /*outline: 1px solid green;*/
+@font-face {
+    font-family: Diablo-Heavy;
+    src: url("../fonts/diablo-heavy.ttf");
 }
-body{
+
+* {
+    /*outline: 1px solid green;*/
+    box-sizing: border-box;
+}
+html{
+    background: lightgray;
+}
+
+body {
+    font-family: Diablo-Heavy, sans-serif;
+    font-size: 10px;
+    color: #fff;
     width: 768px;
     height: 574px;
     margin: 0 auto;
-    /*background: url("../images/back-big.png") center center no-repeat;*/
-    /*background-size: contain;*/
+    background: url("../images/back-big.png") center center no-repeat;
+    background-size: contain;
 }
-main{
+
+p {
+    margin: 0;
+}
+
+main {
+   padding-top: 55px;
     display: flex;
     justify-content: center;
 }
-.items, .inventory{
+
+.gold-information {
+    margin: 23px auto 0;
+    width: 175px;
+    display: grid;
+    grid-template-rows: 20px 23px;
+    grid-gap: 2px;
+    background: black;
+}
+
+.current-gold, .max-gold {
+    height: 100%;
+    border: 1px solid #fff;
+}
+
+.current-gold {
+    display: grid;
+    grid-template-columns: 25px auto;
+    align-items: center;
+}
+
+.max-gold__title {
+    padding-top: 5px;
+}
+
+.items, .inventory {
     width: 310px;
     height: 420px;
-    outline: 1px solid yellowgreen;
+    position: relative;
 
 }
-.items{
-    /*background: url("../images/bg_item.png") center center no-repeat;*/
-    /*background-size: contain;*/
-}
-.inventory{
-    /*background: url("../images/bg_item-right.png") center center no-repeat;*/
-    /*background-size: contain;*/
 
+.items {
+    background: url("../images/bg_item.png") center center no-repeat;
+    background-size: cover;
 }
-.other-items-information{
-    margin: 0 auto;
-    width: 285px;
+
+.other-items-information {
+    margin: 11px auto;
+    width: 290px;
     height: 285px;
     display: grid;
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: repeat(10, 1fr);
-    grid-gap: 2px;
+    background: rgba(8, 8, 8, 0.9);
 }
 
-.treasure-box{
-    grid-area:1/1/3/3;
-    background-size: contain;
-    background: rgba(0, 0, 0, 0.5) url("../images/cube.png") no-repeat center center;
+.bag-item, .put-on-inventory__item, .other-inventory__item {
+    border: 1px solid rgba(194, 194, 194, 0.7);
+
+}
+
+.treasure-box {
+    grid-area: 1/1/3/3;
+    background: url("../images/cube.png") no-repeat center center;
     background-size: contain;
 
 }
+
+.runa-branch {
+
+    background: url("../images/runa-branch.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.runa-cristall {
+
+    background: url("../images/runa-cristall.png") no-repeat center center;
+
+}
+
+.runa-fang {
+
+    background: url("../images/runa-fang.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.runa-fire {
+
+    background: url("../images/runa-fire.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.runa-pear {
+
+    background: url("../images/runa-pear.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.runa-time {
+
+    background: url("../images/runa-time.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.runa-runa {
+
+    background: url("../images/runa.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.empty {
+    background: none;
+    background-size: contain;
+
+}
+
+.orange-ring {
+    background: url("../images/orange-ring.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.key {
+    grid-area: 8/1/11/2; /*Вынести в отдельный класс!*/
+    background: url("../images/key.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.medal {
+    background: url("../images/medal.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.eye {
+    background: url("../images/eye.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.coulomb {
+    background: url("../images/coulomb.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.helmet {
+    background: url("../images/helmet.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.gold-ring {
+    background: url("../images/gold-ring.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.del-btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: url("../images/del-btn.png") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.del-btn-left {
+    bottom: 12px;
+    right: 13px;
+}
+
+.del-btn-right {
+    bottom: 12px;
+    left: 13px;
+}
+
+.inventory {
+    background: url("../images/bg_item-right.png") center center no-repeat;
+    background-size: cover;
+}
+
+.put-on-inventory {
+    width: 290px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 25px 40px 75px 25px 40px;
+    grid-template-columns: 35px 35px 40px 70px 40px 35px 35px;
+    grid-template-areas: "lt-w__v1   lt-w__v2   .           helmet   .            rt-w__v1   rt-w__v2"
+                         "lt-w       lt-w       .           helmet   rt-j__neck   rt-w       rt-w"
+                         "lt-w       lt-w       .           armor    .            rt-w       rt-w"
+                         "gloves     gloves     .           armor    .            boots      boots"
+                         "gloves     gloves     lt-jewels   belt     rt-j__ring   boots      boots";
+}
+
+.left-weapon__var1 {
+    grid-area: lt-w__v1;
+}
+
+.left-weapon__var2 {
+    grid-area: lt-w__v2;
+}
+
+.left-weapon {
+    grid-area: lt-w;
+    background: url("../images/sword.png") center center no-repeat;
+    background-size: cover;
+}
+
+.gloves {
+    grid-area: gloves;
+    background: url("../images/gloves.png") center center no-repeat;
+    background-size: cover;
+}
+
+.put-on__left-jewels {
+    grid-area: lt-jewels;
+    background: url("../images/gold-ring.png") center center no-repeat;
+    background-size: cover;
+}
+
+.put-on__helmet {
+    grid-area: helmet;
+    background: url("../images/helmet.png") center center no-repeat;
+    background-size: cover;
+}
+
+.armor {
+    grid-area: armor;
+    background: url("../images/armor.png") center center no-repeat;
+    background-size: cover;
+}
+
+.belt {
+    grid-area: belt;
+    background: url("../images/belt.png") center center no-repeat;
+    background-size: cover;
+}
+
+.right-jewels__necklace {
+    grid-area: rt-j__neck;
+    background: url("../images/necklace.png") center center no-repeat;
+    background-size: cover;
+}
+
+.right-jewels__ring {
+    grid-area: rt-j__ring;
+    background: url("../images/gold-ring.png") center center no-repeat;
+    background-size: cover;
+}
+
+.right-weapon__var1 {
+    grid-area: rt-w__v1;
+}
+
+.right-weapon__var2 {
+    grid-area: rt-w__v2;
+}
+
+.right-weapon {
+    grid-area: rt-w;
+    background: url("../images/sword.png") center center no-repeat;
+    background-size: cover;
+}
+
+.boots {
+    grid-area: boots;
+    background: url("../images/boots.png") center center no-repeat;
+    background-size: cover
+}
+
+.put-on-inventory__item {
+    margin: 3px;
+}
+.other-inventory{
+    width: 290px;
+    height: 170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(6, 1fr)/ repeat(10, 1fr) ;
+    background: rgba(8, 8, 8, 0.9);
+}
+.left-weapon__var1,
+.left-weapon__var2,
+.right-weapon__var1,
+.right-weapon__var2 {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    height: 100%;
+}
+
+
+.current-gold__inventory{
+    height: 20px ;
+    width: 30%;
+    margin: 5px auto;
+    grid-template-rows: none;
+    grid-template-columns: 20px auto; /*по такому же принципу исправить вверху*/
+    border: 1px solid #fff; /*по такому же принципу исправить вверху*/
+    background: #000; /*по такому же принципу исправить вверху*/
+
+}
+
+
