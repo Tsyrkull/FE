@@ -14,7 +14,6 @@ while (startQuest) {
                 attemptNum = 1;
                 tryNums = [];
                 compNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-                console.log(compNum);
                 continue
             } else {
                 alert(`Thank you for your game. Have a nice day!`);
