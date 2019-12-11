@@ -5,13 +5,9 @@ let startQuest = confirm('Do you want to play a game?'),
     attemptNum = 1,
     tryNums = [];
 
-console.log(compNum);
-
 while (startQuest) {
     let userNum = +prompt('Choose a number from ' + minNum + ' to ' + maxNum);
-
     if (userNum) {
-
         if (userNum === compNum) {
             let newGame = confirm(`Congratulation, you guessed the number from ${attemptNum} attempts! Do you want to play again?`);
             if (newGame) {
@@ -19,8 +15,7 @@ while (startQuest) {
                 tryNums = [];
                 compNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
                 console.log(compNum);
-                userNum = +prompt('Choose a number from ' + minNum + ' to ' + maxNum);
-
+                continue
             } else {
                 alert(`Thank you for your game. Have a nice day!`);
                 break
@@ -40,7 +35,6 @@ while (startQuest) {
         alert(`You failed the input`);
         break
     }
-
 }
 if (!startQuest) {
     alert(`Let's play next time`)
