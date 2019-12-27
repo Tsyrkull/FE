@@ -1,18 +1,50 @@
-function* fibonacci() {
-    let a = 0,
-        b = 1;
-    for (let i=3;; i++){
-        let c = a+b;
-        a = b;
-        b = c;
-        yield a;
+function fibonacci() {
+    const newFibGen = (function* () {
+        const startArr = [0, 1];
+        let forward = true;
+        for (; true;) {
+            const flag = yield startArr[0];
+            if (flag === true || flag === false) {
+                forward = flag;
+            }
+            if (forward) {
+                const next = startArr[0] + startArr[1];
+                startArr.push(next);
+                startArr.shift();
+            } else {
+                const prev = startArr[1] - startArr[0];
+                startArr.unshift(prev);
+                startArr.pop();
+            }
+        }
+    })();
+    const step = (flag) => newFibGen.next(flag).value;
+    return (amount, flag) => {
+        const result = [];
+        for (let i = 0; i < amount; i++) {
+            result.push(step(flag))
+        }
+        return result
     }
 }
-// let arr=[];
 
-const result = fibonacci();
-for (let i=0;i<10;i++){
-    console.log(result.next());
-    // arr.push(result.next())
+const fibGen = fibonacci();
+
+let userNum = +prompt("How much numbers do u want to see?");
+
+while (userNum) {
+    let oneMore = confirm(`Your numbers are ${fibGen(userNum)} Again?`);
+
+    if (oneMore) {
+        userNum = +prompt("How much numbers do u want to see?")
+    } else {
+        break
+    }
 }
-// console.log(arr[5]);
+if (!userNum) {
+    alert("You failed the input")
+}
+
+
+
+
