@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Task-5</title>
+    <link rel="stylesheet" href="style/main.css">
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+</head>
+<body>
+<header>
+    <div class="header-logo">
+        <img src="image/three-days-grace-logo.png" alt="logo" class="header-logo__image">
+        <h1 class="header-logo__title">Three Days Grace</h1>
+    </div>
+</header>
+<main>
+    <label for="burger-menu" class="icon-menu"><img src="icon/menu-button.svg" alt="menu-icon"></label>
+    <input type="checkbox" id="burger-menu" class="burger-menu__checkbox">
+    <nav class="navigation">
+        <ul class="nav-menu">
+            <li class="nav-menu__item">
+                <a href="#slider" class="item-link">Posters</a>
+                <ul class="nav-submenu">
+                    <li>Posters-1.1
+                        <ul class="nav-lowest-submenu nav-lowest-submenu1">
+                            <li>Posters-1.1.1</li>
+                            <li>Posters-1.1.2</li>
+                            <li>Posters-1.1.3</li>
+                        </ul>
+                    </li>
+                    <li>Posters-1.2
+                        <ul class="nav-lowest-submenu nav-lowest-submenu1">
+                            <li>Posters-1.2.1</li>
+                            <li>Posters-1.2.2</li>
+                            <li>Posters-1.2.3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-menu__item">
+                <a href="#albums" class="item-link">Albums</a>
+                <ul class="nav-submenu">
+                    <li>Albums-1.1
+                        <ul class="nav-lowest-submenu nav-lowest-submenu2">
+                            <li>Albums-1.1.1</li>
+                            <li>Albums-1.1.2</li>
+                            <li>Albums-1.1.3</li>
+                        </ul>
+                    </li>
+                    <li>Albums-1.2
+                        <ul class="nav-lowest-submenu nav-lowest-submenu2">
+                            <li>Albums-1.2.1</li>
+                            <li>Albums-1.2.2</li>
+                            <li>Albums-1.2.3</li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-menu__item">
+                <a href="#members" class="item-link">Members</a>
+                <ul class="nav-submenu">
+                    <li>Members-1.1
+                        <ul class="nav-lowest-submenu nav-lowest-submenu3">
+                            <li>Members-1.1.1</li>
+                            <li>Members-1.1.2</li>
+                            <li>Members-1.1.3</li>
+                        </ul>
+                    </li>
+                    <li>Members-1.2
+                        <ul class="nav-lowest-submenu nav-lowest-submenu3">
+                            <li>Members-1.2.1</li>
+                            <li>Members-1.2.2</li>
+                            <li>Members-1.2.3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-menu__item">
+                <a href="#contacts" class="item-link">Contacts</a>
+                <ul class="nav-submenu">
+                    <li>Contacts-1.1
+                        <ul class="nav-lowest-submenu nav-lowest-submenu4">
+                            <li>Contacts-1.1.1</li>
+                            <li>Contacts-1.1.2</li>
+                            <li>Contacts-1.1.3</li>
+                        </ul>
+                    </li>
+                    <li>Contacts-1.2
+                        <ul class="nav-lowest-submenu nav-lowest-submenu4">
+                            <li>Contacts-1.2.1</li>
+                            <li>Contacts-1.2.2</li>
+                            <li>Contacts-1.2.3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="section-slider" id="slider">
+        <h2>Three Days Grace Posters</h2>
+        <div class="main-slider">
+            <input type="radio" class="slider-radio-btn slider-radio-btn1" name="slider-radio-btn" id="slide1-btn"
+                   checked>
+            <input type="radio" class="slider-radio-btn slider-radio-btn2" name="slider-radio-btn" id="slide2-btn">
+            <input type="radio" class="slider-radio-btn slider-radio-btn3" name="slider-radio-btn" id="slide3-btn">
+            <input type="radio" class="slider-radio-btn slider-radio-btn4" name="slider-radio-btn" id="slide4-btn">
+            <input type="radio" class="slider-radio-btn slider-radio-btn5" name="slider-radio-btn" id="slide5-btn">
+            <div class="radio-btn__labels">
+                <label for="slide1-btn" class="label1 radio-btn-label"></label>
+                <label for="slide2-btn" class="label2 radio-btn-label"></label>
+                <label for="slide3-btn" class="label3 radio-btn-label"></label>
+                <label for="slide4-btn" class="label4 radio-btn-label"></label>
+                <label for="slide5-btn" class="label5 radio-btn-label"></label>
+            </div>
+            <div class="slide slide1">
+                <img src="image/poster5.jpg" alt="slide1-img">
+            </div>
+            <div class="slide slide2">
+                <img src="image/poster3.jpg" alt="slide2-img">
+            </div>
+            <div class="slide slide3">
+                <img src="image/poster1.jpg" alt="slide3-img">
+            </div>
+            <div class="slide slide4">
+                <img src="image/poster2.jpg" alt="slide4-img">
+            </div>
+            <div class="slide slide5">
+                <img src="image/poster4.jpg" alt="slide5-img">
+            </div>
+            <div class="slider__arrow slider__arrow-prev">
+                <label for="slide1-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                <label for="slide2-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                <label for="slide3-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                <label for="slide4-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+                <label for="slide5-btn"><img src="icon/angle-left-solid.svg" alt="arrow-icon"></label>
+            </div>
+            <div class="slider__arrow slider__arrow-next">
+                <label for="slide1-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                <label for="slide2-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                <label for="slide3-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                <label for="slide4-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+                <label for="slide5-btn"><img src="icon/angle-right-solid.svg" alt="arrow-icon"></label>
+            </div>
+
+        </div>
+        <h3>Best music in autumn!</h3>
+    </section>
+    <section class="section-albums" id="albums">
+        <h2>Albums</h2>
+        <div class="albums">
+            <div class="album">
+                <img src="image/three-days-grace.jpg" alt="album-three-days-grace" class="album-image">
+                <p class="album-name">Three Days Grace</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«Burn»</li>
+                    <li class="album-list__song-name">«Just Like You»</li>
+                    <li class="album-list__song-name">«I Hate Everything About You»</li>
+                    <li class="album-list__song-name">«Home»</li>
+                    <li class="album-list__song-name">«Scared»</li>
+                    <li class="album-list__song-name">«Let You Down»</li>
+                    <li class="album-list__song-name"> «Now or Never»</li>
+                    <li class="album-list__song-name">«Born Like This»</li>
+                    <li class="album-list__song-name">«Drown»</li>
+                    <li class="album-list__song-name">«Wake Up»</li>
+                    <li class="album-list__song-name">«Take Me Under»</li>
+                    <li class="album-list__song-name">«Overrated»</li>
+                </ol>
+            </div>
+            <div class="album">
+                <img src="image/one-x.png" alt="album-one-x" class="album-image">
+                <p class="album-name">One-X</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«It's All Over»</li>
+                    <li class="album-list__song-name">«Pain»</li>
+                    <li class="album-list__song-name">«Animal I Have Become»</li>
+                    <li class="album-list__song-name">«Never Too Late»</li>
+                    <li class="album-list__song-name">«On My Own»</li>
+                    <li class="album-list__song-name">«Riot»</li>
+                    <li class="album-list__song-name">«Get Out Alive»</li>
+                    <li class="album-list__song-name">«Let It Die»</li>
+                    <li class="album-list__song-name">«Over And Over»</li>
+                    <li class="album-list__song-name">«Time of Dying»</li>
+                    <li class="album-list__song-name">«Gone Forever»</li>
+                    <li class="album-list__song-name">«One-X»</li>
+                </ol>
+            </div>
+            <div class="album">
+                <img src="image/life-starts-now.jpg" alt="album-life-starts-now" class="album-image">
+                <p class="album-name">Life Starts Now</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«Bitter Taste»</li>
+                    <li class="album-list__song-name">«Break»</li>
+                    <li class="album-list__song-name">«World So Cold»</li>
+                    <li class="album-list__song-name">«Lost In You»</li>
+                    <li class="album-list__song-name">«The Good Life»</li>
+                    <li class="album-list__song-name">«No More»</li>
+                    <li class="album-list__song-name">«Last to Know»</li>
+                    <li class="album-list__song-name">«Someone Who Cares»</li>
+                    <li class="album-list__song-name">«Bully»</li>
+                    <li class="album-list__song-name">«Without You»</li>
+                    <li class="album-list__song-name">«Goin' Down»</li>
+                    <li class="album-list__song-name">«Life Starts Now»</li>
+                </ol>
+            </div>
+            <div class="album">
+                <img src="image/transit-of-venus.jpeg" alt="album-transit-of-venus" class="album-image">
+                <p class="album-name">Transit Of Venus</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«Sign of the Times»</li>
+                    <li class="album-list__song-name">«Chalk Outline»</li>
+                    <li class="album-list__song-name">«The High Road»</li>
+                    <li class="album-list__song-name">«Operate»</li>
+                    <li class="album-list__song-name">«Anonymous»</li>
+                    <li class="album-list__song-name">«Misery Loves My Company»</li>
+                    <li class="album-list__song-name">«Give In to Me»</li>
+                    <li class="album-list__song-name">«Happiness»</li>
+                    <li class="album-list__song-name">«Give Me a Reason»</li>
+                    <li class="album-list__song-name">«Time That Remains»</li>
+                    <li class="album-list__song-name">«Expectations»</li>
+                    <li class="album-list__song-name">«Broken Glass»</li>
+                    <li class="album-list__song-name">«Unbreakable Heart»</li>
+                </ol>
+            </div>
+            <div class="album">
+                <img src="image/human.jpeg" alt="album-human" class="album-image">
+                <p class="album-name">Human</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«Human Race»</li>
+                    <li class="album-list__song-name">«Painkiller»</li>
+                    <li class="album-list__song-name">«Fallen Angel»</li>
+                    <li class="album-list__song-name">«Landmine»</li>
+                    <li class="album-list__song-name">«Tell Me Why»</li>
+                    <li class="album-list__song-name">«I Am Machine»</li>
+                    <li class="album-list__song-name">«So What»</li>
+                    <li class="album-list__song-name">«Car Crash»</li>
+                    <li class="album-list__song-name">«Nothing Fair In Love and War»</li>
+                    <li class="album-list__song-name">«One Too Many»</li>
+                    <li class="album-list__song-name">«The End Is Not the Answer»</li>
+                    <li class="album-list__song-name">«The Real You»</li>
+                </ol>
+            </div>
+            <div class="album">
+                <img src="image/outsider.jpeg" alt="album-outsider" class="album-image">
+                <p class="album-name">Outsider</p>
+                <ol class="album-list">
+                    <li class="album-list__song-name">«Right Left Wrong»</li>
+                    <li class="album-list__song-name">«The Mountain»</li>
+                    <li class="album-list__song-name">«I Am an Outsider»</li>
+                    <li class="album-list__song-name">«Infra-Red»</li>
+                    <li class="album-list__song-name">«Nothing to Lose but You»</li>
+                    <li class="album-list__song-name">«Me Against You»</li>
+                    <li class="album-list__song-name">«Love Me or Leave Me»</li>
+                    <li class="album-list__song-name">«Strange Days»</li>
+                    <li class="album-list__song-name">«Villain I'm Not»</li>
+                    <li class="album-list__song-name">«Chasing the First Time»</li>
+                    <li class="album-list__song-name">«The New Real»</li>
+                    <li class="album-list__song-name">«The Abyss»</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <h2 class="about-us__title">About</h2>
+        <p class="about-us__description">Three Days Grace is a Canadian rock band formed in Norwood, Ontario in 1997.
+            Based in Toronto, the band's original line-up consisted of guitarist and lead vocalist Adam Gontier, drummer
+            and backing vocalist Neil Sanderson, and bassist Brad Walst. In 2003, Barry Stock was recruited as the
+            band's lead guitarist, making them a four-member band. In 2013, Gontier left the band and was replaced by My
+            Darkest Days' vocalist Matt Walst, who is also the younger brother of bassist Brad Walst.</p>
+        <p class="about-us__description">Currently signed to RCA Records, they have released six studio albums, each at
+            three-year intervals: Three Days Grace in 2003, One-X in 2006, Life Starts Now in 2009, Transit of Venus in
+            2012, Human in 2015, and Outsider in 2018. The first three albums have been RIAA certified 2x platinum, 3x
+            platinum, and platinum, respectively, in the United States. In Canada, they have been certified by Music
+            Canada as platinum, double platinum, and platinum, respectively. The band has a record 15 No. 1 songs on the
+            Billboard Hot Mainstream Rock Tracks chart, and three No. 1 hits on Alternative Songs.</p>
+        <h3 id="members">Team members</h3>
+        <div class="team-members">
+            <div class="member">
+                <img src="icon/microphone-solid.svg" alt="microphone-icon" class="team-member__icon">
+                <p class="member-name">Mat Walst</p>
+                <p class="member-position">Vocal</p>
+            </div>
+            <div class="member">
+                <img src="icon/guitar-solid.svg" alt="guitar-icon" class="team-member__icon">
+                <p class="member-name">Brad Walst</p>
+                <p class="member-position">Bas-guitar</p>
+            </div>
+            <div class="member">
+                <img src="icon/drum-solid.svg" alt="drum-icon" class="team-member__icon">
+                <p class="member-name">Neil Sanderson</p>
+                <p class="member-position">Drums</p>
+            </div>
+            <div class="member">
+                <img src="icon/guitar-solid.svg" alt="guitar-icon" class="team-member__icon">
+                <p class="member-name">Barry Stock</p>
+                <p class="member-position">Solo-guitar</p>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <section class="contacts__map">
+            <h3>Where we located?</h3>
+            <p><a href="https://goo.gl/maps/rpjTvkgPYEdUXhSY6" target="_blank">Norwood, Ontario, Canada</a></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1453.5462558409754!2d-79.8785893418198!3d43.228519994784534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDEzJzQyLjciTiA3OcKwNTInMzkuMCJX!5e0!3m2!1sru!2sua!4v1573566302559!5m2!1sru!2sua" style="border:0;" allowfullscreen="" class="map"></iframe>
+        </section>
+        <section class="contacts__form">
+            <h3>Want to contact us?</h3>
+            <p>Telephone: <a href="tel:+380503552776">050 355 277 6</a></p>
+            <p>Skype: <a href="skype:live:artem13_5">live:artem13_5</a></p>
+            <p>Facebook: <a href="http://facebook.com" target="_blank">link</a></p>
+            <form action="#">
+                <textarea name="contact-form-message" cols="30" rows="6" placeholder="Leave us a message" class="form__message"></textarea>
+                <input type="email" name="contact-form-email" placeholder="your@mail.com" class="form__email">
+                <button class="form__btn">send</button>
+            </form>
+        </section>
+    </section>
+</main>
+<footer>
+    <p>Made by Tsyrkull.</p>
+    <p>You can find me on: <a href="https://github.com/Tsyrkull" target="_blank">GitHub</a> and <a
+            href="https://www.linkedin.com/in/%D0%B0%D1%80%D1%82%D0%B5%D0%BC-%D1%86%D0%B8%D0%BB%D1%8E%D1%80%D0%B8%D0%BA-6a93a4aa/"
+            target="_blank">LinkedIn</a>
+    </p>
+</footer>
+
+</body>
+</html>

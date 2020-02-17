@@ -1,0 +1,527 @@
+@font-face {
+    font-family: Diablo-Heavy;
+    src: url("../fonts/diablo-heavy.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: lightgray;
+}
+
+body {
+    font-family: Diablo-Heavy, sans-serif;
+    font-size: 10px;
+    color: #fff;
+    width: 768px;
+    height: 574px;
+    margin: 0 auto;
+    background: url("../images/back-big.png") center center no-repeat;
+    background-size: contain;
+}
+
+p {
+    margin: 0;
+}
+
+main {
+    padding-top: 55px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+
+}
+
+.gold-information {
+    margin: 23px auto 0;
+    width: 175px;
+    display: grid;
+    grid-template-rows: repeat(2, 22px);
+    grid-gap: 2px;
+    background: #000;
+}
+
+.current-gold, .max-gold {
+    border: 1px solid #fff;
+}
+
+.current-gold {
+    display: grid;
+    grid-template-columns: 25px auto;
+    align-items: center;
+
+}
+
+.max-gold__title {
+    padding-top: 5px;
+}
+
+.items, .inventory {
+    width: 310px;
+    height: 420px;
+    position: relative;
+
+}
+
+.items {
+    background: url("../images/bg_item.png") center center no-repeat;
+    background-size: cover;
+}
+
+.other-items-information {
+    margin: 11px auto;
+    width: 290px;
+    height: 285px;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    background: rgba(8, 8, 8, 0.9);
+}
+
+.bag-item, .put-on-inventory__item, .other-inventory__item, .potion {
+    border: 1px solid rgba(194, 194, 194, 0.7);
+
+}
+
+.bag-item {
+    position: relative;
+}
+
+.bag-item-description {
+    display: none;
+    width: 250px;
+    height: 115px;
+    text-align: center;
+    background: rgba(8, 8, 8, 0.8);
+    position: absolute;
+    top: 57px;
+    left: -80px;
+    z-index: 1;
+}
+
+.bag-item-description p {
+    height: 13%;
+}
+
+.item-name,
+.item-might {
+    color: #dad8a8;
+}
+
+.item-bonus {
+    color: #625fa6;
+}
+
+.bag-item:hover .bag-item-description {
+    display: block;
+}
+
+.item-2x2{
+    grid-area: 1/1/3/3;
+
+}
+.treasure-box {
+    background: url("../images/cube.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.rune-weakness {
+
+    background: url("../images/rune-weakness.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.blue-crystal {
+    background: url("../images/blue-crystal.png") no-repeat center center;
+
+}
+
+.dragon-fang {
+
+    background: url("../images/dragon-fang.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.rune-fire {
+
+    background: url("../images/rune-fire.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.rune-poison {
+
+    background: url("../images/rune-poison.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.rune-time {
+
+    background: url("../images/rune-time.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.rune-dragon {
+
+    background: url("../images/rune-dragon.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.fire-ring {
+    background: url("../images/fire-ring.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.item-1x3{
+    grid-area: 8/1/11/2;
+
+}
+.key {
+    background: url("../images/key.png") no-repeat center center;
+    background-size: contain;
+}
+
+.medal {
+    background: url("../images/medal.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.eye {
+    background: url("../images/eye.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.coulomb {
+    background: url("../images/coulomb.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.helmet {
+    background: url("../images/helmet.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.gold-ring {
+    background: url("../images/gold-ring.png") no-repeat center center;
+    background-size: contain;
+
+}
+
+.del-btn {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: url("../images/del-btn.png") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.del-btn-left {
+    bottom: 12px;
+    right: 13px;
+}
+
+.del-btn-right {
+    bottom: 12px;
+    left: 13px;
+}
+
+.inventory {
+    background: url("../images/bg_item-right.png") center center no-repeat;
+    background-size: cover;
+}
+
+.put-on-inventory {
+    width: 290px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 25px 40px 75px 25px 40px;
+    grid-template-columns: 35px 35px 40px 70px 40px 35px 35px;
+    grid-template-areas: "lt-w__v1   lt-w__v2   .           helmet   .            rt-w__v1   rt-w__v2" "lt-w       lt-w       .           helmet   rt-j__neck   rt-w       rt-w" "lt-w       lt-w       .           armor    .            rt-w       rt-w" "gloves     gloves     .           armor    .            boots      boots" "gloves     gloves     lt-jewels   belt     rt-j__ring   boots      boots";
+}
+
+.left-weapon__var1 {
+    grid-area: lt-w__v1;
+}
+
+.left-weapon__var2 {
+    grid-area: lt-w__v2;
+}
+
+.left-weapon {
+    grid-area: lt-w;
+    background: url("../images/sword.png") center center no-repeat;
+    background-size: cover;
+}
+
+.gloves {
+    grid-area: gloves;
+    background: url("../images/gloves.png") center center no-repeat;
+    background-size: cover;
+}
+
+.put-on__left-jewels {
+    grid-area: lt-jewels;
+    background: rgba(8, 8, 8, 0.9)
+    url("../images/gold-ring.png") center center no-repeat;
+    background-size: contain;
+}
+
+.put-on__helmet {
+    grid-area: helmet;
+    background: url("../images/helmet.png") center center no-repeat;
+    background-size: cover;
+}
+
+.armor {
+    grid-area: armor;
+    background: url("../images/armor.png") center center no-repeat;
+    background-size: cover;
+}
+
+.belt {
+    grid-area: belt;
+    background: rgba(8, 8, 8, 0.9)
+    url("../images/belt.png") center center no-repeat;
+    background-size: cover;
+}
+
+.right-jewels__necklace {
+    grid-area: rt-j__neck;
+    background: url("../images/necklace.png") center center no-repeat;
+    background-size: cover;
+}
+
+.right-jewels__ring {
+    grid-area: rt-j__ring;
+    background: rgba(8, 8, 8, 0.9) url("../images/gold-ring.png") center center no-repeat;
+    background-size: contain;
+}
+
+.right-weapon__var1 {
+    grid-area: rt-w__v1;
+}
+
+.right-weapon__var2 {
+    grid-area: rt-w__v2;
+}
+
+.right-weapon {
+    grid-area: rt-w;
+    background: url("../images/sword.png") center center no-repeat;
+    background-size: cover;
+}
+
+.boots {
+    grid-area: boots;
+    background: url("../images/boots.png") center center no-repeat;
+    background-size: cover
+}
+
+.put-on-inventory__item {
+    margin: 2px;
+}
+
+.other-inventory {
+    width: 290px;
+    height: 170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(6, 1fr)/ repeat(10, 1fr);
+    background: rgba(8, 8, 8, 0.9);
+}
+
+.left-weapon__var1,
+.left-weapon__var2,
+.right-weapon__var1,
+.right-weapon__var2 {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    height: 100%;
+}
+
+.blue-book {
+    grid-area: 1/10/3/11;
+    background: url("../images/blue-book.png") center center no-repeat;
+    background-size: contain;
+}
+
+.gold-book {
+    grid-area: 3/10/5/11;
+    background: url("../images/gold-book.png") center center no-repeat;
+    background-size: contain;
+
+}
+
+.paper {
+    background: url("../images/paper.png") center center no-repeat;
+    background-size: contain;
+
+}
+
+.torch {
+    background: url("../images/torch.png") center center no-repeat;
+    background-size: contain;
+
+}
+
+.current-gold__inventory {
+    height: 20px;
+    width: 30%;
+    margin: 5px auto;
+    grid-template-columns: 20px auto;
+    border: 1px solid #fff;
+    background: #000;
+
+}
+
+footer {
+    width: 550px;
+    margin: 45px auto 0;
+    display: grid;
+    position: relative;
+    grid-template-rows: 10px 30px 10px;
+    grid-template-columns: 50px 35px 35px 15px 120px 45px 120px 15px 35px 35px 50px;
+}
+
+.red-square-left {
+    grid-area: 1/1/4/2;
+    background: url("../images/bottom-left.jpg") center center no-repeat;
+    background-size: contain;
+}
+
+.cross-btn {
+    background: url("../images/cross-btn.png") center center no-repeat;
+    background-size: cover;
+
+}
+
+.cross-btn-left {
+    grid-area: 2/3/3/4;
+
+}
+
+.bar-experience {
+    grid-area: 1/5/2/6;
+    width: 100%;
+}
+
+.container-stamina {
+    grid-area: 2/5/3/6;
+}
+
+.arrow-up {
+    grid-area: 1/6/4/7;
+    background: url("../images/footer-center.png") center center no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+}
+
+.potions {
+    grid-area: 2/7/3/8;
+
+}
+
+.cross-btn-right {
+    grid-area: 2/9/3/10;
+
+}
+
+.red-square-right {
+    grid-area: 1/11/4/12;
+    background: url("../images/bottom-right.jpg") center center no-repeat;
+    background-size: contain;
+}
+
+footer::before, footer::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: -35px;
+
+}
+
+footer::before {
+    background: url("../images/circle-red.png") center center no-repeat;
+    background-size: contain;
+    left: -85px;
+}
+
+footer::after {
+    background: url("../images/circle-blue.png") center center no-repeat;
+    background-size: contain;
+    right: -85px;
+}
+
+progress {
+    -webkit-appearance: none;
+}
+
+.bar-experience {
+    padding-top: 7px;
+}
+
+.bar-experience::-webkit-progress-bar {
+    height: 5px;
+    background: #000;
+    border-radius: 1px;
+
+}
+
+.bar-experience::-webkit-progress-value {
+    background: #fff;
+    border-radius: 1px;
+
+}
+
+.container-stamina {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: end;
+}
+
+.bar-stamina, .stamina-img {
+    height: 70%;
+    width: 100%;
+
+}
+
+.bar-stamina::-webkit-progress-bar {
+    background: #000;
+    border-radius: 1px;
+}
+
+.bar-stamina::-webkit-progress-value {
+    background: #fed078;
+    border-radius: 1px;
+}
+
+.potions {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    background: rgba(8, 8, 8, 0.9);
+}
+
+.potion {
+    display: grid;
+    align-items: end;
+    background: url("../images/potion.png") center center no-repeat;
+    background-size: contain;
+}
+
+

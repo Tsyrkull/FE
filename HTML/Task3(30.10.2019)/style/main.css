@@ -1,0 +1,81 @@
+body{
+    width: 95%;
+    margin: 0 auto;
+}
+/**{*/
+    /*outline: 1px solid green;*/
+/*}*/
+mark{
+    background: none;
+    font-style: italic;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+a{
+    text-decoration: none;
+}
+table, td{
+    border: 1px solid #000;
+}
+figure{
+    margin: 0;
+}
+figcaption{
+    display: none;
+}
+video{
+    width: 500px;
+}
+form{
+    width: 400px;
+}
+input[type=text], input[type=email], textarea{
+    width: 200px;
+    outline: none;
+}
+textarea{
+    resize: none;
+}
+button {
+    margin: 10px;
+    width: 100%;
+    background: lightgray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+track{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+footer{
+    border-top:1px solid #000;
+    margin-top: 50px;
+    text-align: right;
+}
+.nav-list{
+    width: 100%;
+    list-style-type: none;
+}
+.nav-list__item{
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.form__field-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.cover-feedback{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+

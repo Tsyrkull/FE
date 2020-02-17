@@ -1,0 +1,21 @@
+img{
+    width: 500px;
+    height: auto;
+}
+body{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.navigation-list__item{
+    display: inline-block;
+    padding: 20px;
+}
+.contacts__tel, .contacts__email{
+    display: block;
+}
+.contacts__email{
+    padding-bottom: 20px;
+}

@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.icon-menu {
+    display: none;
+}
+
+.icon-menu img {
+    width: 100%;
+    height: 100%;
+}
+
+.burger-menu__checkbox {
+    display: none;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu ul {
+    list-style-type: none
+}
+
+.nav-menu li {
+    width: 20%;
+    height: 20px;
+    background: #e57b7f;
+    cursor: pointer;
+}
+
+.nav-menu__item {
+    position: relative;
+    z-index: 5;
+}
+
+.nav-submenu, .nav-lowest-submenu {
+    min-width: 100%;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav-submenu {
+    top: 100%;
+    left: 0;
+}
+
+.nav-lowest-submenu1, .nav-lowest-submenu2 {
+    top: 100%;
+    left: 75%
+}
+
+.nav-lowest-submenu3, .nav-lowest-submenu4 {
+    top: 100%;
+    right: 75%
+}
+
+.nav-submenu li {
+    width: 100%
+}
+
+.nav-menu li:hover .nav-submenu {
+    display: block;
+}
+
+.nav-submenu li:hover .nav-lowest-submenu {
+    display: block;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo__image {
+    width: 200px;
+
+}
+
+.header-logo__title {
+    font-size: 24px;
+}
+
+.nav-menu {
+    list-style-type: none;
+}
+
+.nav-menu__item {
+    display: inline-block;
+}
+
+.section-slider {
+    display: block;
+    height: 500px;
+}
+
+.main-slider {
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-radio-btn {
+    display: none;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.radio-btn__labels {
+    position: absolute;
+    z-index: 2;
+    top: 93%;
+    left: 40%;
+}
+
+.radio-btn-label {
+    background: rgba(234, 213, 203, 0.7);
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.radio-btn-label:hover {
+    background: #e57b7f;
+}
+
+.slider-radio-btn1:checked ~ .slide1,
+.slider-radio-btn2:checked ~ .slide2,
+.slider-radio-btn3:checked ~ .slide3,
+.slider-radio-btn4:checked ~ .slide4,
+.slider-radio-btn5:checked ~ .slide5 {
+    visibility: visible;
+}
+
+.slider-radio-btn1:checked ~ div .label1,
+.slider-radio-btn2:checked ~ div .label2,
+.slider-radio-btn3:checked ~ div .label3,
+.slider-radio-btn4:checked ~ div .label4,
+.slider-radio-btn5:checked ~ div .label5 {
+    background: #e57b7f;
+}
+
+.slider__arrow-prev label, .slider__arrow-next label {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: none;
+    top: 40%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.slider__arrow-prev label {
+    left: 0;
+
+}
+
+.slider__arrow-next label {
+    right: 0;
+
+}
+
+.slider-radio-btn1:checked ~ .slider__arrow-prev label:nth-child(5),
+.slider-radio-btn2:checked ~ .slider__arrow-prev label:nth-child(1),
+.slider-radio-btn3:checked ~ .slider__arrow-prev label:nth-child(2),
+.slider-radio-btn4:checked ~ .slider__arrow-prev label:nth-child(3),
+.slider-radio-btn5:checked ~ .slider__arrow-prev label:nth-child(4) {
+    visibility: visible;
+}
+
+.slider-radio-btn1:checked ~ .slider__arrow-next label:nth-child(2),
+.slider-radio-btn2:checked ~ .slider__arrow-next label:nth-child(3),
+.slider-radio-btn3:checked ~ .slider__arrow-next label:nth-child(4),
+.slider-radio-btn4:checked ~ .slider__arrow-next label:nth-child(5),
+.slider-radio-btn5:checked ~ .slider__arrow-next label:nth-child(1) {
+    visibility: visible;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.album {
+    width: 250px;
+    margin: 20px;
+}
+
+.album:hover {
+    background: #e57b7f;
+    opacity: 0.7;
+}
+
+.album-image {
+    width: 100%;
+    height: 200px;
+}
+
+.album-list__song-name {
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+
+.about-us__description {
+    text-align: left;
+    text-indent: 20px;
+}
+
+.team-members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;
+}
+
+.member {
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+.member:hover {
+    background: #e57b7f;
+    opacity: 0.7;
+}
+
+.team-member__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #000;
+}
+
+.contacts__map {
+    width: 550px;
+    margin: 20px;
+}
+
+.contacts__form {
+    width: 230px;
+    margin: 20px;
+
+}
+
+.contacts a:hover {
+    color: #e57b7f;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+}
+
+.form__message {
+    resize: none;
+}
+
+.form__message, .form__email, .form__btn {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+
+.form__btn {
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+}
+
+.form__btn:hover {
+    background: #e57b7f;
+}
+
+.contacts a:hover, footer a:hover {
+    color: #e57b7f;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer p {
+    display: inline-block;
+}
+
+@media (max-width: 640px ) {
+    .nav-menu li:hover .nav-submenu {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .section-slider, .navigation {
+        display: none;
+    }
+
+    .icon-menu {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 15px auto;
+    }
+
+    .icon-menu img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .burger-menu__checkbox:checked ~ .navigation, .navigation li {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .burger-menu__checkbox:checked ~ .navigation li:first-child {
+        display: none;
+    }
+}
